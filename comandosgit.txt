@@ -39,3 +39,8 @@ git merge <nombre rama>
 
 //crear y moverse a una rama
 git checkout -b <nombre>
+
+//instalar git en ubuntu
+https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04#how-to-set-up-git
+
+
