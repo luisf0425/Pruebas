@@ -24,3 +24,9 @@ git reset —-soft <commit>
 
 //eliminar commit tocando el código
 git reset —-hard <commit>
+
+//crear rama
+git branch <nombre>
+
+//crear rama
+git branch <nombre>
