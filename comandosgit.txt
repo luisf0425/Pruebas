@@ -62,3 +62,9 @@ git remote set-url origin https://yourusername@github.com/user/repo.git
 
 //fuente
 https://stackoverflow.com/questions/7438313/pushing-to-git-returning-error-code-403-fatal-http-request-failed
+
+//si se ejecutó en modo root se corrige con
+
+sudo chown -R "${USER:-$(id -un)}" .
+
+
