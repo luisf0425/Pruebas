@@ -13,8 +13,8 @@ git commit -m <mensaje>
 //viaje entre commits
 git checkout <commit>
 
-//devolverse
-git checkout master
+//Moverse entre las ramas
+git checkout <rama>
 
 //ver commits
 git log
@@ -33,3 +33,6 @@ git branch <nombre>
 
 //borrar rama 
 git branch -d
+
+//pararse en la rama master y luego se cargan los commits hechos en la rama de prueba 
+git merge <nombre rama>
