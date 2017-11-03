@@ -30,3 +30,6 @@ git branch <nombre>
 
 //crear rama
 git branch <nombre>
+
+//borrar rama 
+git branch -d
