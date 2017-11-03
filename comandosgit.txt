@@ -43,4 +43,22 @@ git checkout -b <nombre>
 //instalar git en ubuntu
 https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04#how-to-set-up-git
 
+//conectar el repositorio local con el remoto
+git remote add origin <link del repositorio>
 
+//Para ver el estado
+git remote -v
+
+//Para subirlo al repositorio remoto
+git push origin master
+
+//nota: editar .git/config del repositorio en [remote "origin"] y cambiar el nombre de usurio en url
+
+https://youruser:password@github.com/user/repo.git
+
+//o usar
+
+git remote set-url origin https://yourusername@github.com/user/repo.git
+
+//fuente
+https://stackoverflow.com/questions/7438313/pushing-to-git-returning-error-code-403-fatal-http-request-failed
