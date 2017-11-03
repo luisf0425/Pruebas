@@ -1,0 +1,26 @@
+//usuario
+git config --global user.name
+
+//email
+git config --global user.email
+
+//iniciar
+git init
+git status
+git add
+git commit -m <mensaje>
+
+//viaje entre commits
+git checkout <commit>
+
+//devolverse
+git checkout master
+
+//ver commits
+git log
+
+//eliminar commit sin tocar código
+git reset —-soft <commit>
+
+//eliminar commit tocando el código
+git reset —-hard <commit>
