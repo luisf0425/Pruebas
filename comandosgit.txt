@@ -36,3 +36,6 @@ git branch -D
 
 //pararse en la rama master y luego se cargan los commits hechos en la rama de prueba 
 git merge <nombre rama>
+
+//crear y moverse a una rama
+git checkout -b <nombre>
