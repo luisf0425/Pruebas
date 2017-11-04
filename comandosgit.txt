@@ -67,4 +67,20 @@ https://stackoverflow.com/questions/7438313/pushing-to-git-returning-error-code-
 
 sudo chown -R "${USER:-$(id -un)}" .
 
+//cambiar mensaje en commit
+git commit --amend -m <"mensaje">
 
+//forzar a hacer los cambios -f
+git push origin master -f
+
+//tags al ultimo commit Ej:v1.0
+git tag <nombre tag>
+
+//tags para cualquier commit
+git tag -a <nombre tag> -m <"mensaje"> <número commit>
+
+//subir tag al servidor remoto
+git push origin <nombre tag>
+
+//subir todos los tags
+git push origin --tags
