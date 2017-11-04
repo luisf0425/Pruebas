@@ -53,18 +53,15 @@ git remote -v
 git push origin master
 
 //nota: editar .git/config del repositorio en [remote "origin"] y cambiar el nombre de usurio en url
-
 https://youruser:password@github.com/user/repo.git
 
 //o usar
-
 git remote set-url origin https://yourusername@github.com/user/repo.git
 
 //fuente
 https://stackoverflow.com/questions/7438313/pushing-to-git-returning-error-code-403-fatal-http-request-failed
 
 //si se ejecutó en modo root se corrige con
-
 sudo chown -R "${USER:-$(id -un)}" .
 
 //cambiar mensaje en commit
@@ -83,4 +80,38 @@ git tag -a <nombre tag> -m <"mensaje"> <número commit>
 git push origin <nombre tag>
 
 //subir todos los tags
-git push origin --tags
+git push -u origin --tags
+
+//para trabajar en equipo
+//1) primero crear una organización en git
+//luego clonar el repositorio
+git clone <repositorio>
+
+//mostrar ramas ocultas
+git branch -a
+
+//conectarse a la organización
+git remote add origin <link repositorio>
+
+//pasar cambios  cambios al repositorio local que no tiene los cambios a la rama oculta
+git fetch origin
+
+//pasa a la rama master, es decir bajar los cambios
+git merge origin/master
+
+
+//para proyectos de terceros
+//usar fork para copiar repositorio
+git clone <repositorio en nuestro github>
+
+//add y commit
+
+//actualizar nuevos cambios de la organización
+git fetch upstream
+
+//conexión con ssh
+//generar llave
+ssh key-gen
+
+//Usar fetch y merge al mismo tiempo
+git pull: fetch + merge
