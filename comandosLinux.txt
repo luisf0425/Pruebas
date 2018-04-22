@@ -1,0 +1,47 @@
+omandos Linux
+
+vmstat: Ve caracteristicas del almacenamiento, swap, io, system y cpu.
+
+free -m: Para caracteristicas especiales del almacenamiento, -m para verlos en megas.
+
+top: Los procesos que corren actualmente, con la tecla 1 mira las demás cpus.
+
+stress: Genera trabajo por cpu o a todas. Ej: stress -c 1, le da trabajo de 100% a una cpu stress --help para ver las diferentes opciones. stress --hdd estresa el disco duro
+wa -> iowait: Amount of time the CPU has been waiting for I/O to complete.
+iotop -> observa la información de uso de E/S producida por el kernel de linux para el almacenamiento
+Para monitorear
+apt-get install sysstat -y 
+iostat 
+sar 1 5
+lsof
+
+uptime: indica la estabilidad del sistema, indica la hora actual, el tiempo en que a estado encendida la computadora, los usuarios conectados y la carga del sistema que se ha realizado en los últimos 1, 5 y 15 minutos.
+
+netstat -ie == ifconfig
+netstat -s -> display networking statistics (like SNMP)
+netstat -tuna -> tcp and upd connection
+
+
+iftop -> Proporciona una visión continua e interactiva del tráfico de red que pasa por una interfaz.
+iftop -i eth0 selecciono la interfaz eth0
+
+nload ->  It is a console application which monitors network traffic and bandwidth usage in real time. It visualizes the in and outgoing traffic using two graphs and provides additional info like total amount of transferred data and min/max network usage.
+
+Para instalar sngrep
+https://github.com/irontec/sngrep
+sudo apt-get install libpcap-dev -y
+sudo apt-get install libncurses-dev -y
+./bootstrap.sh
+./configure
+make
+make install
+
+
+speedtest cliente
+
+https://github.com/sivel/speedtest-cli
+./speedtest.py --simple
+
+iperf -> para testear la conexión del cliente/servidor
+iperf -s -> Se usa en el lado del servidor
+iperf -c <ip servidor>
